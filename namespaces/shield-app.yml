@@ -10,11 +10,9 @@ metadata:
   namespace: shield
   name: the-bus
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
-  - nodePort: 31112
-    port: 8080
-    targetPort: 8080
+  - port: 8080
   selector:
     env: marvel
 ---
